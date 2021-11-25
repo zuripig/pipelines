@@ -1,4 +1,4 @@
-job('seed-job') {
+job('seed/seed-job') {
   scm {
     git ('https://github.com/zuripig/pipelines.git')
   }
