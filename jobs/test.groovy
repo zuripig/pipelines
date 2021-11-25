@@ -1,5 +1,5 @@
 job('seedTest/test1') {
   steps {
-    shell('echo Hello Nexus Point!')
+    sh 'echo Hello Nexus Point!'
   }
 }
