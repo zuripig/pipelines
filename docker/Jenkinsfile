@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t testimage https://github.com/zuripig/base_images.git#mymain'
+                sh 'docker build -t testimage https://github.com/zuripig/base_images.git#mymain:centos8'
             }
         }
         stage('Scan') {
