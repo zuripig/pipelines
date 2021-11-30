@@ -1,10 +1,3 @@
-// job('seedTest/testJob') {
-//   steps {
-//     shell('echo Hello World!')
-//   }
-// }
-
-
 pipelineJob('seedTest/testPipe') { 
     properties {
         disableConcurrentBuilds()
