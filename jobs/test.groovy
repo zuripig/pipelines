@@ -14,7 +14,7 @@ names.each { entry ->
       }
 
       environmentVariables {
-          env('APP', "pip-"+appName)
+          env('APP', appName)
 	        env('BRANCH', repoBranch)
       }
       definition {
