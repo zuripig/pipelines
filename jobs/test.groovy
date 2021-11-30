@@ -1,4 +1,4 @@
-// multibranchPipelineJob('seedTest/testPipeline') {
+// job('seedTest/testJob') {
 //   steps {
 //     shell('echo Hello World!')
 //   }
@@ -14,10 +14,7 @@ pipelineJob('seedTest/testPipe') {
             scm {
                 git('git@github.com:zuripig/pipelines.git', 'mymain')
             }
-            scriptPath("jobs/*.groovy")
-        }
-        steps {
-          shell('echo HIYA!')
+            scriptPath("jobs/pipe.groovy")
         }
     }
 }
