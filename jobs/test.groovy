@@ -13,10 +13,10 @@ names.each { entry ->
           disableConcurrentBuilds()
       }
 
-      environment {
-	        APP = appName
-	        BRANCH = repoBranch
-      }
+      // environment {
+	    //     APP = appName
+	    //     BRANCH = repoBranch
+      // }
       definition {
           cpsScm {
               scm {
