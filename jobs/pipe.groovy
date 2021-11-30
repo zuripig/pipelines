@@ -1,5 +1,8 @@
-pipelineJob('seedTest/testPipe') {
-  steps {
-    shell('echo Hello World!')
-  }
+pipelineJob('pipeJob') {
+    definition {
+        cps {
+            script(readFileFromWorkspace('pipe.groovy'))
+            sandbox()
+        }
+    }
 }
