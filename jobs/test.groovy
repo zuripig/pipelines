@@ -6,12 +6,17 @@ def names = [
 
 names.each { entry -> 
   appName = entry.key
-
+  repoBranch = entry.value.branch
 
   pipelineJob("seedTest/pipe-${entry.key}") { 
       properties {
           disableConcurrentBuilds()
       }
+
+      environmentVariables {
+	        env('APP', appName)
+	        env('BRANCH', repoBranch)
+
       definition {
           cpsScm {
               scm {
@@ -21,4 +26,5 @@ names.each { entry ->
           }
       }
   }
+}
 }
