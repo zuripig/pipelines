@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo "app = " + env.APP
                 sh 'DOCKER_BUILDKIT=0 docker build -t testimage https://github.com/zuripig/base_images.git#mymain:' + env.APP
             }
         }
