@@ -9,17 +9,15 @@ pipelineJob('seedTest/testPipe') {
     properties {
         disableConcurrentBuilds()
     }
-
-    logRotator {
-        numToKeep(5)
-    }
-    
     definition {
-        cpsScm {
+        cps {
             scm {
                 git('git@github.com:zuripig/pipelines.git', 'mymain')
             }
             scriptPath("jobs/*.groovy")
+        }
+        steps {
+          shell('echo HIYA!')
         }
     }
 }
