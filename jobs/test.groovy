@@ -12,7 +12,7 @@ pipelineJob('seedTest/testPipe') {
     definition {
         cpsScm {
             scm {
-                git('git@github.com:zuripig/pipelines.git', 'mymain')
+                git('https://github.com/zuripig/pipelines.git', 'mymain')
             }
             scriptPath("docker/Jenkinsfile")
         }
