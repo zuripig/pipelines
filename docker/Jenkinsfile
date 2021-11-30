@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    
+    environment {
+        FILE_NAME = "scan_${BUILD_NUMBER}"
+        }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker build -t testimage .'
+            }
+        }
+        stage('Scan') {
+            steps {
+                sh 'snyk container test --json-file-output=${FILE_NAME}.json testimage || true'
+            }
+        }
+        stage('HTML Output') {
+            steps {
+                sh 'snyk-to-html -i ${FILE_NAME}.json -o ${FILE_NAME}.html -a'
+            }
+        }
+        stage('Artifact') {
+            steps {
+                archiveArtifacts artifacts: "${FILE_NAME}.json,${FILE_NAME}.html", onlyIfSuccessful: true
+            }
+        }
+    }
+}

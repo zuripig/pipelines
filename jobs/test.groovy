@@ -14,7 +14,7 @@ pipelineJob('seedTest/testPipe') {
             scm {
                 git('git@github.com:zuripig/pipelines.git', 'mymain')
             }
-            scriptPath("jobs/pipe.groovy")
+            scriptPath("docker/Jenkinsfile")
         }
     }
 }
