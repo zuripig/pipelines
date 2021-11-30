@@ -13,9 +13,9 @@ names.each { entry ->
           disableConcurrentBuilds()
       }
 
-      environmentVariables {
-	        env('APP', appName)
-	        env('BRANCH', repoBranch)
+      environment {
+	        APP = appName
+	        BRANCH = repoBranch
 
       definition {
           cpsScm {
