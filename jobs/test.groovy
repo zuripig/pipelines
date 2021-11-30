@@ -1,4 +1,4 @@
-job('seedTest/test3') {
+pipelineJob('seedTest/testPipeline') {
   steps {
     shell('echo Hello World!')
   }
