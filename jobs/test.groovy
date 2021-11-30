@@ -15,7 +15,7 @@ names.each { entry ->
 
       environmentVariables {
           env('APP', "pip-"+appName)
-	        env('BRANCH', branchName)
+	        env('BRANCH', repoBranch)
       }
       definition {
           cpsScm {
