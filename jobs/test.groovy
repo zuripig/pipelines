@@ -14,7 +14,7 @@ names.each { entry ->
       }
 
       environment {
-	        APP = appName,
+	        APP = appName
 	        BRANCH = repoBranch
       }
       definition {
