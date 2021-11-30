@@ -10,7 +10,7 @@ pipelineJob('seedTest/testPipe') {
         disableConcurrentBuilds()
     }
     definition {
-        cps {
+        cpsScm {
             scm {
                 git('git@github.com:zuripig/pipelines.git', 'mymain')
             }
