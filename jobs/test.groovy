@@ -5,7 +5,7 @@
 // }
 
 
-pipelineJob(seedTest/testPipe) { 
+pipelineJob('seedTest/testPipe') { 
     properties {
         disableConcurrentBuilds()
     }
