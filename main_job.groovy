@@ -1,4 +1,4 @@
-job('seedTest/one') {
+job('thejob') {
   scm {
     git ('https://github.com/zuripig/pipelines.git')
   }
