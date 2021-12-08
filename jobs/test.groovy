@@ -1,7 +1,7 @@
 def names = [
 	'centos7': ['branch': 'mymain'],
 	'centos8': ['branch': 'mymain'],
-    'centos6': ['branch': 'mymain']
+    	'centos6': ['branch': 'mymain']
 ]
 
 names.each { entry -> 
@@ -15,7 +15,7 @@ names.each { entry ->
 
       environmentVariables {
           env('APP', appName)
-	        env('BRANCH', repoBranch)
+	  env('BRANCH', repoBranch)
       }
       definition {
           cpsScm {
