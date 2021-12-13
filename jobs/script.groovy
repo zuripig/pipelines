@@ -14,7 +14,7 @@ folder("base_images"){
 
 names.each { entry -> 
   appName = entry.key
-  repoBranch = entry.value.branch
+  repoBranch = entry.value.repo + entry.value.branch
 
   pipelineJob("base_images/pipe-${entry.key}") { 
       properties {
