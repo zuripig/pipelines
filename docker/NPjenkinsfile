@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         FILE_NAME = "scan_${BUILD_NUMBER}"
-        IMAGE_NAME = env.APP
+        IMAGE_NAME = "env.APP"
         }
 
     stages {
