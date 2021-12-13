@@ -17,7 +17,7 @@ folder("base_images"){
 
 names.each { entry -> 
   appName = entry.value.folder + entry.key
-  folderBranch = entry.value.branch
+  repoBranch = entry.value.branch
 
   pipelineJob("base_images/pipe-${entry.key}") { 
       properties {
@@ -26,7 +26,7 @@ names.each { entry ->
 
       environmentVariables {
           env('APP', appName)
-	        env('BRANCH', folderBranch)
+	        env('BRANCH', repoBranch)
       }
       definition {
           cpsScm {
