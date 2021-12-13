@@ -1,5 +1,5 @@
 def names = [
-	//'node12': [branch: 'mymain', repo: 'nuxt'],
+	'node12': [branch: 'mymain', repo: 'nuxt:'],
 	//'nuxt/node14': ['branch': 'mymain'],
     //'nuxt/node16': ['branch': 'mymain'],
     'jenkins': [branch: 'mymain'],
