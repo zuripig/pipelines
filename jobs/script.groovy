@@ -5,7 +5,7 @@ def names = [
     'jenkins': ['branch': 'mymain'],
     'laravel/php72': ['branch': 'mymain'],
     'laravel/php74': ['branch': 'mymain'],
-    'nginx-proxy': ['branch': 'mymain'],
+    'nginx-proxy': ['branch': 'mymain']
 
 ]
 
