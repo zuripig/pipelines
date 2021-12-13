@@ -4,6 +4,9 @@ def names = [
     'centos6': ['branch': 'mymain']
 ]
 
+folder(testfolder){
+}
+
 names.each { entry -> 
   appName = entry.key
   repoBranch = entry.value.branch
