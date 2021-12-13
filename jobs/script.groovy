@@ -16,7 +16,7 @@ names.each { entry ->
   appName = entry.key
   repoBranch = entry.value.branch
 
-  pipelineJob("base-images/pipe-${entry.key}") { 
+  pipelineJob("base_images/pipe-${entry.key}") { 
       properties {
           disableConcurrentBuilds()
       }
