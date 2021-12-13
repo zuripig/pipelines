@@ -5,6 +5,9 @@ def names = [
     'jenkins': [branch: 'master', folder: ''],
     'php72': [branch: 'master', folder: 'laravel/'],
     'php74': [branch: 'master', folder: 'laravel/'],
+    'php8': [branch: 'master', folder: 'laravel/'],
+    'php8-tco': [branch: 'master', folder: 'laravel/'],
+    'fincalc': [branch: 'master', folder: 'laravel/'],
     'nginx-proxy': [branch: 'master', folder: '']
 
 ]
