@@ -4,7 +4,7 @@ def names = [
     	'centos6': ['branch': 'mymain']
 ]
 
-folder(testfolder){
+folder("testfolder"){
 }
 
 names.each { entry -> 
