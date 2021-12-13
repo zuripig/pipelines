@@ -9,7 +9,7 @@ def names = [
 
 ]
 
-folder("base-images"){  
+folder("base_images"){  
 }
 
 names.each { entry -> 
