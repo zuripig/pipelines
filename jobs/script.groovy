@@ -1,10 +1,10 @@
 def names = [
 	'node12': [branch: 'mymain', repo: 'nuxt/'],
-	//'nuxt/node14': ['branch': 'mymain'],
-    //'nuxt/node16': ['branch': 'mymain'],
+	'node14': [branch: 'mymain' repo: 'nuxt/'],
+    'node16': [branch: 'mymain', repo: 'nuxt/'],
     'jenkins': [branch: 'mymain', repo: ''],
-    //'laravel/php72': ['branch': 'mymain'],
-    //'laravel/php74': ['branch': 'mymain'],
+    'php72': [branch: 'mymain', repo: 'laravel/'],
+    'php74': [branch: 'mymain', repo: 'laravel/'],
     'nginx-proxy': [branch: 'mymain', repo: '']
 
 ]
