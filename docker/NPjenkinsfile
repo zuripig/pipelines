@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         FILE_NAME = "scan_${BUILD_NUMBER}"
+        IMAGE_NAME = env.APP
         }
 
     stages {
@@ -10,7 +11,7 @@ pipeline {
             steps {
                 echo "app = " + env.APP
                 echo "branch = " + env.BRANCH
-                sh 'DOCKER_BUILDKIT=0 docker build -t ' + env.APP + 'https://github.com/nexuspointltd/base-images.git#' + env.BRANCH + ':' + env.APP
+                sh 'DOCKER_BUILDKIT=0 docker build -t ${IMAGE_NAME} https://github.com/nexuspointltd/base-images.git#' + env.BRANCH + ':' + env.APP
             }
         }
         stage('Scan') {
