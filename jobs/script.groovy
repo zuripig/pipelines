@@ -1,11 +1,11 @@
 def names = [
-	'node12': [branch: 'mymain', repo: 'nuxt/'],
-	'node14': [branch: 'mymain', repo: 'nuxt/'],
-    'node16': [branch: 'mymain', repo: 'nuxt/'],
-    'jenkins': [branch: 'mymain', repo: ''],
-    'php72': [branch: 'mymain', repo: 'laravel/'],
-    'php74': [branch: 'mymain', repo: 'laravel/'],
-    'nginx-proxy': [branch: 'mymain', repo: '']
+	'node12': [branch: 'master', folder: 'nuxt/'],
+	'node14': [branch: 'master', folder: 'nuxt/'],
+    'node16': [branch: 'master', folder: 'nuxt/'],
+    'jenkins': [branch: 'master', folder: ''],
+    'php72': [branch: 'master', folder: 'laravel/'],
+    'php74': [branch: 'master', folder: 'laravel/'],
+    'nginx-proxy': [branch: 'master', folder: '']
 
 ]
 
@@ -13,8 +13,8 @@ folder("base_images"){
 }
 
 names.each { entry -> 
-  appName = entry.value.repo + entry.key
-  repoBranch = entry.value.branch
+  appName = entry.value.folder + entry.key
+  folderBranch = entry.value.branch
 
   pipelineJob("base_images/pipe-${entry.key}") { 
       properties {
@@ -23,7 +23,7 @@ names.each { entry ->
 
       environmentVariables {
           env('APP', appName)
-	        env('BRANCH', repoBranch)
+	        env('BRANCH', folderBranch)
       }
       definition {
           cpsScm {
