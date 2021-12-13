@@ -30,7 +30,7 @@ names.each { entry ->
               scm {
                   git('https://github.com/zuripig/pipelines.git', 'mymain')
               }
-              scriptPath("docker/Jenkinsfile")
+              scriptPath("docker/NPjenkinsfile")
           }
       }
   }
