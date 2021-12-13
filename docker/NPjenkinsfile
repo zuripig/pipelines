@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo "app = " + env.APP
                 echo "branch = " + env.BRANCH
-                sh 'DOCKER_BUILDKIT=0 docker build -t env.APP https://github.com/nexuspointltd/base-images.git#' + env.BRANCH + ':' + env.APP
+                sh 'DOCKER_BUILDKIT=0 docker build -t ' + env.APP + 'https://github.com/nexuspointltd/base-images.git#' + env.BRANCH + ':' + env.APP
             }
         }
         stage('Scan') {
