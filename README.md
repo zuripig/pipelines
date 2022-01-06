@@ -8,6 +8,6 @@ This groovy script contains the information needed to build the pipelines, such 
 
 Once the seed job has been run, the Jenkins server will now have a folder containing all the created pipelines. These pipelines will each execute the Jenkinsfile given by the groovy script. Each pipeline will then build, scan and output its own base image. It will do this for each base image by getting the corresponding Dockerfiles from the base-images Github repo.
 
-![](images/git1.png?s=20)
+![](images/git1.png?s=10)
 
 *Base images located at nexuspointltd/base-images*
